@@ -223,7 +223,7 @@
             seconds = seconds < 10 ? '0' + seconds : seconds;
 
             const timeString = `${hours}:${minutes}:${seconds}`;
-            const ampm = now.getHours() >= 12 ? 'PM' : 'AM';
+            const ampm = now.getHours() >= 12 ? '' : '';
             document.getElementById('clock').innerHTML = is24HourFormat ? timeString : timeString + ' ' + ampm;
         }
 
