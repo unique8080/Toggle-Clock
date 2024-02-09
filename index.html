@@ -28,10 +28,11 @@
         .toggle-switch {
             display: inline-block;
             position: absolute;
-            top: 150px;
-            left: 230px;
-            width: 60px;
-            height: 34px;
+            top: 115px;
+            left: 305px;
+            width: 40px;  /* Decreased width */
+            height: 20px; /* Decreased height */
+            transform: translateY(-50%);
         }
 
         .toggle-switch input {
@@ -48,20 +49,20 @@
             right: 0;
             bottom: 0;
             background-color: #ccc;
-            transition: .2s;
-            border-radius: 34px;
+            transition: .1s;
+            border-radius: 9px; /* Adjusted border-radius */
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 5px;
+            padding: 0 2px; /* Adjusted padding */
             box-sizing: border-box;
         }
-
+        
         .slider:before {
             position: absolute;
             content: "";
-            height: 26px;
-            width: 26px;
+            height: 14px; /* Decreased height */
+            width: 10px; /* Decreased width */
             background-color: white;
             transition: .4s;
             border-radius: 50%;
