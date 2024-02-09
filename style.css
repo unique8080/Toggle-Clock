@@ -1,1 +1,136 @@
+body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.5s, color 0.5s;
+        }
 
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5em;
+        }
+
+        .toggle-switch {
+            display: inline-block;
+            position: absolute;
+            top: 115px;
+            left: 305px;
+            width: 40px;  /* Decreased width */
+            height: 20px; /* Decreased height */
+            transform: translateY(-50%);
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .1s;
+            border-radius: 9px; /* Adjusted border-radius */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2px; /* Adjusted padding */
+            box-sizing: border-box;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 14px; /* Decreased height */
+            width: 10px; /* Decreased width */
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Emoji Icon for Settings */
+        #settings-icon {
+            font-size: 1em;
+            cursor: pointer;
+            position: absolute;
+            top: 113px;
+            left: 350px;
+            transform: translateY(-50%);
+        }
+
+        /* Settings Modal Styles */
+        #settings-modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        #save-btn {
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #save-btn:hover {
+            background-color: #0b7dda;
+        }
+
+        .hidden-text {
+            opacity: 0;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
