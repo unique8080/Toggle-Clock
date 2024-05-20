@@ -48,4 +48,5 @@ function openSettingsModal() {
         // Toggle button functionality
         document.getElementById('formatToggle').addEventListener('change', function () {
             is24HourFormat = !is24HourFormat;
+            console.log("Hello ");
         });
